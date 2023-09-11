@@ -6,6 +6,11 @@
       class="w-2/3 h-75"
       @submit.prevent="submit"
     >
+      <h1
+        class="text-center whitespace-pre-wrap mb-4 w-2/3 sm:w-auto mx-auto text-4xl sm:text-5xl font-bold"
+      >
+        {{ $t("message.email.message") }}
+      </h1>
       <v-text-field
         v-model="name.value.value"
         :error-messages="name.errorMessage.value"

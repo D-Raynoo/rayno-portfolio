@@ -44,6 +44,7 @@ export default {
     },
     exploreButton: "Explore",
     email: {
+      message: 'Forward an email to me',
       sendButton: 'Send',
       nameField: 'Name',
       phoneField: 'Phone Number',
