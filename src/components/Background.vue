@@ -13,20 +13,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import bg3D from '@/assets/models/bg2/scene.gltf'
-import { OrbitControls, GLTFModel } from '@tresjs/cientos'
-import { useRenderLoop } from '@tresjs/core'
+import { ref } from "vue";
+import bg3D from "@/assets/models/bg2/scene.gltf";
+import { OrbitControls, GLTFModel } from "@tresjs/cientos";
+import { useRenderLoop } from "@tresjs/core";
 
-const { onLoop } = useRenderLoop()
-const bgModel = ref(null)
+const { onLoop } = useRenderLoop();
+const bgModel = ref(null);
 
 onLoop(({ delta, elapsed }) => {
   if (bgModel.value) {
-    bgModel.value.rotation.y += delta / 2
-    bgModel.value.rotation.z = elapsed * 0.1
+    bgModel.value.rotation.y += delta / 2;
+    bgModel.value.rotation.z = elapsed * 0.1;
   }
-})
+});
 </script>
 
 <style>
