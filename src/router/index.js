@@ -4,6 +4,7 @@ import Skills from '@/views/Skills.vue'
 import Portfolio from '@/views/portfolio/index.vue'
 import Home from '@/views/Home.vue'
 import Projects from '@/views/Projects.vue'
+import SendEmail from '@/views/SendEmail.vue'
 
 
 const router = createRouter({
@@ -40,6 +41,13 @@ const router = createRouter({
           name: 'projects',
           components: {
             b: Projects
+          }
+        },
+        {
+          path: '/portfolio/send-email',
+          name: 'send-email',
+          components: {
+            b: SendEmail
           }
         },
       ]

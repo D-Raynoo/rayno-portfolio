@@ -1,14 +1,14 @@
 <script setup>
-import SideInfoBar from '@/components/SideInfoBar.vue'
-import { ref, onMounted } from 'vue'
-import { useRenderLoop } from '@tresjs/core'
+import SideInfoBar from "@/components/SideInfoBar.vue";
+import { ref, onMounted } from "vue";
+import { useRenderLoop } from "@tresjs/core";
 
-const { resume } = useRenderLoop()
+const { resume } = useRenderLoop();
 onMounted(() => {
-  resume()
-})
+  resume();
+});
 
-const drawer = ref(false)
+const drawer = ref(false);
 </script>
 
 <template>
@@ -19,7 +19,10 @@ const drawer = ref(false)
     />
     <div class="lg:hidden">
       <v-layout class="d-lg-none">
-        <v-navigation-drawer class="bg-blue-grey-lighten-1 d-lg-none rounded-lg" v-model="drawer">
+        <v-navigation-drawer
+          class="bg-blue-grey-lighten-1 d-lg-none rounded-lg"
+          v-model="drawer"
+        >
           <side-info-bar
             id="to-scroll"
             class="shadow-[0_4px_30px_rgba(0,0,0,0.1)] w-full h-full backdrop-blur-[3px] col border border-solid border-[rgba(255,255,255,0.05)]"
@@ -31,28 +34,52 @@ const drawer = ref(false)
     <div
       class="rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[3px] lg:w-4/5 w-full h-full border border-solid border-[rgba(255,255,255,0.05)] overflow-hidden text-neutral-100"
     >
-      <v-toolbar color="rgba(255,255,255,0.14)" class="px-2" density="comfortable">
+      <v-toolbar
+        color="rgba(255,255,255,0.14)"
+        class="px-2"
+        density="comfortable"
+      >
         <div class="w-fit h-fit lg:hidden">
           <v-btn icon @click="drawer = !drawer">
-            <v-icon icon="mdi-chevron-right" class="m-auto" color="rgb(245 245 245)"></v-icon>
+            <v-icon
+              icon="mdi-chevron-right"
+              class="m-auto"
+              color="rgb(245 245 245)"
+            ></v-icon>
           </v-btn>
         </div>
 
         <v-spacer class="lg:hidden"></v-spacer>
         <v-btn icon link to="/portfolio/rayno">
-          <v-icon icon="mdi-account" class="m-auto" color="rgb(245 245 245)"></v-icon>
+          <v-icon
+            icon="mdi-account"
+            class="m-auto"
+            color="rgb(245 245 245)"
+          ></v-icon>
         </v-btn>
 
         <v-btn icon link to="/portfolio/skills">
-          <v-icon icon="mdi-tools" class="m-auto" color="rgb(245 245 245)"></v-icon>
+          <v-icon
+            icon="mdi-tools"
+            class="m-auto"
+            color="rgb(245 245 245)"
+          ></v-icon>
         </v-btn>
 
         <v-btn icon link to="/portfolio/projects">
-          <v-icon icon="mdi-creation" class="m-auto" color="rgb(245 245 245)"></v-icon>
+          <v-icon
+            icon="mdi-creation"
+            class="m-auto"
+            color="rgb(245 245 245)"
+          ></v-icon>
         </v-btn>
 
-        <v-btn icon>
-          <v-icon icon="mdi-email-arrow-right" class="m-auto" color="rgb(245 245 245)"></v-icon>
+        <v-btn icon link to="/portfolio/send-email">
+          <v-icon
+            icon="mdi-email-arrow-right"
+            class="m-auto"
+            color="rgb(245 245 245)"
+          ></v-icon>
         </v-btn>
         <v-spacer></v-spacer>
         <div class="w-1/7">

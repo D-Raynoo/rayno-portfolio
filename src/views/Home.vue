@@ -61,7 +61,7 @@
 <script setup>
 import { ref } from "vue";
 import { OrbitControls, GLTFModel } from "@tresjs/cientos";
-import pcModel from "@/assets/models/computerDraco/sceneDraco-processed.gltf";
+import pcModel from "@/assets/models/computerDraco/scene.gltf";
 
 const loading = ref(false);
 

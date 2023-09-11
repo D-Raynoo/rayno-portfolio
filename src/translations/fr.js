@@ -42,7 +42,12 @@ export default {
       title: "Quelques projets",
       message: "Le reste sera bientôt disponible..."
     },
-    hobbies: ["Design", "Dessin", "Jouer aux échecs"],
-    exploreButton: "Explorer"
+    exploreButton: "Explorer",
+    email: {
+      sendButton: 'Envoyer',
+      nameField: 'Nom',
+      phoneField: 'Numéro de téléphone',
+      messageField: 'Message'
+    }
   }
 }
